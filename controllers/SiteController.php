@@ -2,10 +2,11 @@
 
 namespace app\controllers;
 
-namespace app\core;
+// namespace app\core;
 
 use app\core\Application;
 use app\core\Controller;
+use app\core\Request;
 
 class SiteController extends Controller
 {
@@ -25,8 +26,9 @@ class SiteController extends Controller
         return Application::$app->router->render_view('contact', $param);
     }
 
-    public static function handleContact()
+    public static function handleContact(Request $request)
     {
+        $body = $request->getBody();
         return "handling data";
     }
 }
