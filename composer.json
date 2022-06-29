@@ -1,0 +1,16 @@
+{
+    "name": "trung/php",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./",
+            "Trung\\Php\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Trung",
+            "email": "20trung.pq@vinuni.edu.vn"
+        }
+    ],
+    "require": {}
+}
