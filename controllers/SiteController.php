@@ -2,11 +2,27 @@
 
 namespace app\controllers;
 
-class SiteController
+namespace app\core;
+
+use app\core\Application;
+use app\core\Controller;
+
+class SiteController extends Controller
 {
+    public static function Home()
+    {
+        $param = [
+            'name' => "Trung"
+        ];
+        return Application::$app->router->render_view('home', $param);
+    }
+
     public static function contact()
     {
-        return "handling data";
+        $param = [
+            'name' => "Trung"
+        ];
+        return Application::$app->router->render_view('contact', $param);
     }
 
     public static function handleContact()
